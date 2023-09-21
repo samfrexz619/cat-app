@@ -1,10 +1,10 @@
 <template>
-  <div class="w-13 block">
+  <div class="w-13 block links">
     <router-link :to="{name: items.path}" :class="`${classes} h-19 flex items-center justify-center rounded-20 border-solid border-4 border-vb w-full mb-5`">
       <img :src="getImgUrl" alt="">
     </router-link>
     <router-link :to="{ name: items.path }" 
-      class="uppercase flex items-center justify-center w-full bg-white text-pry rounded-[10px] py-3 text-xs hover:bg-pry_hov links">
+      class="uppercase flex items-center justify-center w-full rounded-[10px] py-3 text-xs">
       {{ items.variant }}
     </router-link>
   </div>
@@ -33,9 +33,16 @@ const classes = computed(()=> {
 
 <style scoped lang="scss">
 .links {
-  a.router-link-active {
-    background: '#FF868E';
-    color: '#fff';
+  a:last-child  {
+    background: #fff;
+    color: #FF868E;
+    &.router-link-active {
+      background: #FF868E;
+      color: #fff;
+    }
+    &:hover {
+      background: #FBE0DC;
+    }
   }
 }
 </style>

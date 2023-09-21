@@ -5,14 +5,14 @@
         <svg width="24" height="24" viewBox="0 0 24 24">
           <use xlink:href="/sprite.svg#logo" />
         </svg>
-        <h1 className="text-txt_black text-2xl font-medium">PetsPaw</h1>
+        <h1 className="text-txt_black text-2xl font-medium dark:text-white">PetsPaw</h1>
         </span>
         <div>
           <ToggleSwitch v-model:checked="savedState" />
         </div>
     </header>
     <div className="pt-10">
-      <h1 className="text-txt_black text-44 font-medium">
+      <h1 className="text-txt_black text-44 font-medium dark:text-white">
         Hi!<span>&#128075;</span>
       </h1>
       <p className="text-grey_10 text-20">
