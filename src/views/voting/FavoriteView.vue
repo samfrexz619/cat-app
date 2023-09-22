@@ -1,11 +1,10 @@
 <template>
-  <main>
-    <p>hey voting</p>
-  </main>
+  <div>
+    favorite
+  </div>
 </template>
 
 <script setup lang="ts">
-
 
 </script>
 

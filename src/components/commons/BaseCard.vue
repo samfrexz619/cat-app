@@ -1,7 +1,7 @@
 <template>
   <div class="w-13 block links">
     <router-link :to="{name: items.path}" :class="`${classes} h-19 flex items-center justify-center rounded-20 border-solid border-4 border-vb w-full mb-5`">
-      <img :src="getImgUrl" alt="">
+      <img :src="getImgUrl" alt="nav images">
     </router-link>
     <router-link :to="{ name: items.path }" 
       class="uppercase flex items-center justify-center w-full rounded-[10px] py-3 text-xs">
@@ -33,7 +33,7 @@ const classes = computed(()=> {
 
 <style scoped lang="scss">
 .links {
-  a:last-child  {
+  a:last-child {
     background: #fff;
     color: #FF868E;
     &.router-link-active {

@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen w-3/4 mx-auto">
+  <div class="min-h-screen w-3/4 mx-auto">
     <header class="w-full h-24 items-center flex justify-between">
       <span className="flex gap-x-2 py-1 items-center">
         <svg width="24" height="24" viewBox="0 0 24 24">
@@ -24,7 +24,7 @@
         v-for="card in cardItems"
         :key="card.id"
         class="w-full"
-      >
+      > 
         <BaseCard :items="card" />
       </div>
     </section>
@@ -34,9 +34,9 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { useStorage } from '@vueuse/core';
-import BaseCard from './commons/BaseCard.vue'
+import BaseCard from '../commons/BaseCard.vue'
 import { cardItems } from '@/lib/utils.ts'
-import ToggleSwitch from './commons/ToggleSwitch.vue';
+import ToggleSwitch from '../commons/ToggleSwitch.vue';
 
 
 const isToggled = ref<boolean>(false)

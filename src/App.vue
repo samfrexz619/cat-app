@@ -1,6 +1,27 @@
 <script setup lang="ts">
-import MainLayout from './components/MainLayout.vue';
+import { useRoute } from 'vue-router';
+import { computed } from 'vue';
+import MainLayout from './components/layouts/MainLayout.vue';
+import HeaderLayout from './components/layouts/HeaderLayout.vue';
+import EmptyLayout from './components/layouts/EmptyLayout.vue'
 
+const route = useRoute();
+
+const layoutComponent = computed(()=> {
+  let currentLayout = null;
+  const routeLayout = route.meta.layout;
+  switch (routeLayout) {
+    case 'header':
+      currentLayout = HeaderLayout;
+      break;
+    case 'empty':
+      currentLayout = EmptyLayout;
+      break;
+    default:
+      currentLayout = '';
+  }
+  return currentLayout;
+})
 </script>
 
 <template>
@@ -10,7 +31,9 @@ import MainLayout from './components/MainLayout.vue';
         <MainLayout  />
       </section>
       <section class="w-1/2">
-        <RouterView  />
+        <component :is="layoutComponent">
+          <RouterView  />
+        </component>
       </section>
     </div>
   </main>

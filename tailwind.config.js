@@ -16,7 +16,8 @@ export default {
         pry: '#FF868E',
         txt_black: '#1D1D1D',
         grey_10: '#8C8C8C',
-        pry_hov: '#FBE0DC'
+        pry_hov: '#FBE0DC',
+        bgg: 'rgba(255, 255, 255, 0.05)',
       },
       fontFamily: {
         jost: ['Jost, sans-serif']
@@ -27,7 +28,8 @@ export default {
       },
       spacing: {
         13: '138px',
-        19: '198px'
+        19: '198px',
+        606: '60px',
       },
       fontSize: {
         44: '44px',
