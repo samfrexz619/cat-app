@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import Voting from '../views/voting/index.vue'
+// import Voting from '../views/voting/index.vue'
 
 
 
@@ -18,44 +18,34 @@ const router = createRouter({
     {
       path: '/voting',
       name: 'voting',
-      component: Voting,
+      component: () => import('../views/voting/VotingView.vue'),
       meta: {
         layout: 'header'
       },
-      children: [
-        {
-          path: '',
-          // name: 'voting',
-          component: () => import('../views/voting/VotingView.vue'),
-          meta: {
-            layout: 'header'
-          },
-        },
-        {
-          path: 'like',
-          name: 'like',
-          component: () => import('@/views/voting/LikeView.vue'),
-          meta: {
-            layout: 'header'
-          },
-        },
-        {
-          path: 'favorite',
-          name: 'favorite',
-          component: () => import('@/views/voting/FavoriteView.vue'),
-          meta: {
-            layout: 'header'
-          },
-        },
-        {
-          path: 'dislike',
-          name: 'dislike',
-          component: () => import('@/views/voting/DislikeView.vue'),
-          meta: {
-            layout: 'header'
-          },
-        },
-      ]
+    },
+    {
+      path: '/like',
+      name: 'like',
+      component: () => import('@/views/like/LikeView.vue'),
+      meta: {
+        layout: 'header'
+      },
+    },
+    {
+      path: '/favorite',
+      name: 'favorite',
+      component: () => import('@/views/favorite/FavoriteView.vue'),
+      meta: {
+        layout: 'header'
+      },
+    },
+    {
+      path: '/dislike',
+      name: 'dislike',
+      component: () => import('@/views/dislike/DislikeView.vue'),
+      meta: {
+        layout: 'header'
+      },
     },
     {
       path: '/breeds',

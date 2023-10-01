@@ -18,6 +18,7 @@ export default {
         grey_10: '#8C8C8C',
         pry_hov: '#FBE0DC',
         bgg: 'rgba(255, 255, 255, 0.05)',
+        pry_5: 'rgba(255, 134, 142, 0.20)',
       },
       fontFamily: {
         jost: ['Jost, sans-serif']

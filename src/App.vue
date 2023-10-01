@@ -25,12 +25,12 @@ const layoutComponent = computed(()=> {
 </script>
 
 <template>
-  <main class="bg-bg_main w-full font-jost dark:bg-black dark:text-white">
-    <div class="flex">
-      <section class="w-1/2">
+  <main class="bg-bg_main w-full font-jost dark:bg-txt_black dark:text-white">
+    <div class="lg:flex block">
+      <section class="lg:w-1/2 lg:block hidden">
         <MainLayout  />
       </section>
-      <section class="w-1/2">
+      <section class="lg:w-1/2 px-7 w-full">
         <component :is="layoutComponent">
           <RouterView  />
         </component>

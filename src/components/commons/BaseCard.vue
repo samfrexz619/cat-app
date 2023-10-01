@@ -1,9 +1,11 @@
 <template>
-  <div class="w-13 block links">
-    <router-link :to="{name: items.path}" :class="`${classes} h-19 flex items-center justify-center rounded-20 border-solid border-4 border-vb w-full mb-5`">
+  <div class="lg:w-13 block w-full links">
+    <router-link 
+      :to="{name: items.path}" 
+      :class="`${classes} h-19 lg:flex items-center justify-center rounded-20 border-solid border-4 border-vb w-full mb-5 hidden`">
       <img :src="getImgUrl" alt="nav images">
     </router-link>
-    <router-link :to="{ name: items.path }" 
+    <router-link :to="{ name: items.path }"
       class="uppercase flex items-center justify-center w-full rounded-[10px] py-3 text-xs">
       {{ items.variant }}
     </router-link>
