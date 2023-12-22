@@ -2,23 +2,39 @@
   <div class="lg:w-13 block w-full links">
     <router-link 
       :to="{name: items.path}" 
-      :class="`${classes} h-19 lg:flex items-center justify-center rounded-20 border-solid border-4 border-vb w-full mb-5 hidden`">
-      <img :src="getImgUrl" alt="nav images">
+      :class="`${classes} h-19 lg:flex items-center justify-center rounded-20 border-solid border-4 border-vb w-full mb-5 hidden`"
+    >
+      <img 
+        :src="getImgUrl" 
+        alt="nav images"
+        @mouseenter="isHover = true"
+        @mouseleave="isHover = false"
+      >
     </router-link>
-    <router-link :to="{ name: items.path }"
-      class="uppercase flex items-center justify-center w-full rounded-[10px] py-3 text-xs">
+    <router-link 
+      :to="{ name: items.path }"
+      :class="`uppercase flex items-center justify-center w-full rounded-[10px] py-3 text-xs ${isHover && 'is-hover'}`"
+    >
       {{ items.variant }}
     </router-link>
   </div>
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
 import { CardItems } from '@/lib/types';
 
 const props = defineProps<{
   items: CardItems;
 }>()
+
+const isHover = ref<boolean>(false)
+
+// const getHover =()=> {
+//   isHover.value = true
+//   console.log(21);
+// }
+
 
 const getImgUrl = computed(()=> {
   return new URL(`../../assets/images/${props.items.img}`, import.meta.url).href
@@ -31,6 +47,10 @@ const classes = computed(()=> {
     ? 'bg-green_bg'
     : 'bg-yellow_bg'
 })
+
+// const getHoverEffect = computed(()=> {
+//   return isHover.value ? 'bg-[#FBE0DC]' : '';
+// })
 </script>
 
 <style scoped lang="scss">
@@ -45,6 +65,9 @@ const classes = computed(()=> {
     &:hover {
       background: #FBE0DC;
     }
+  }
+  .is-hover {
+    background: #FBE0DC;
   }
 }
 </style>

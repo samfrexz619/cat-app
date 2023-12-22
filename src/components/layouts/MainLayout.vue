@@ -7,7 +7,7 @@
         </svg>
         <h1 
           className="text-txt_black text-2xl font-medium dark:text-white">
-          PetsPaw
+          Samfrexz
         </h1>
       </span>
       <div>
@@ -21,7 +21,7 @@
         Hi!<span>&#128075;</span>
       </h1>
       <p className="text-grey_10 text-20">
-        Welcome to MacPaw Bootcamp 2023
+        Welcome to Samfrexz Bootcamp 2023
       </p>
     </div>
     <section class="lg:w-full md:w-3/5 flex pt-16 flex-col lg:flex-row gap-y-5">

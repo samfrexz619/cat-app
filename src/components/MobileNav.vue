@@ -18,7 +18,7 @@
       </div>
     </div>
   </nav>
-</template>
+</template> 
 
 <script setup lang="ts">
 import BaseCard from './commons/BaseCard.vue';

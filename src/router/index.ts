@@ -63,6 +63,14 @@ const router = createRouter({
         layout: 'header'
       },
     },
+    {
+      path: '/demo',
+      name: 'demo',
+      component: () => import('@/views/DemoView.vue'),
+      meta: {
+        layout: 'empty'
+      }
+    }
   ]
 })
 
