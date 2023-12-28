@@ -15,7 +15,7 @@
       :to="{ name: items.path }"
       :class="`uppercase flex items-center justify-center w-full rounded-[10px] py-3 text-xs ${isHover && 'is-hover'}`"
     >
-      {{ items.variant }}
+      {{ items.variant }} 
     </router-link>
   </div>
 </template>

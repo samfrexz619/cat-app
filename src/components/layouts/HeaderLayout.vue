@@ -1,14 +1,14 @@
 <template>
   <header 
-    class="flex py-10 w-full items-center justify-between gap-x-2 flex-wrap-reverse"
+    class="flex flex-col lg:flex-row py-10 w-full items-center justify-between gap-x-2"
   >
-    <div class="xl:w-[420px] w-full xl:pt-0 pt-9">
+    <div class="xl:w-[420px] w-full pt-10 order-2 lg:pt-0">
       <SearchInput
         v-model:model-value="searchItem"
         placeholder="Search for breeds by name"
       />
     </div>
-    <div class="flex gap-x-3 w-full lg:w-auto justify-between">
+    <div class="flex gap-x-3 w-full lg:w-auto justify-between order-1 lg:order-2">
       <button className="lg:hidden h-606 w-606 block bg-white rounded-20 text-paw_pry dark:bg-bgg">
         <span className="w-full flex justify-center items-center h-full mt-1">
           <svg width='30' height='30' viewBox='0 0 30 30'>
@@ -16,7 +16,7 @@
           </svg>
         </span>
       </button>
-      <div class="flex gap-x-4 lg:pb-0 pb-4">
+      <div class="flex gap-x-4">
         <router-link
           class="h-606 w-606 rounded-20 flex justify-center items-center dark:bg-bgg"
           :to="{ name: link.name}"
